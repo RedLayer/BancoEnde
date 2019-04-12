@@ -1,0 +1,7 @@
+package dominio.test;
+
+import junit.framework.TestCase;
+
+public class CuentaTester1 extends TestCase{
+
+}

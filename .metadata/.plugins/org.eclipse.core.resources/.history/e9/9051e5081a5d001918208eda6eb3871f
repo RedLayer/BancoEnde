@@ -1,0 +1,14 @@
+package dominio;
+
+public class CreditoTester1 extends TestCase{
+
+	Cuenta cuenta;
+	Credito tarjeta;
+	
+	public void tearDown() throws Exception{
+		
+	}
+	public void testIngresar500() {
+		
+	}
+}

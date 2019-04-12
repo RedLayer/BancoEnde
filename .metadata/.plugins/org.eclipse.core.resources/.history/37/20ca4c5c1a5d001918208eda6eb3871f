@@ -1,0 +1,11 @@
+package dominio.test;
+
+public class CuentaTester1 extends TestCase{
+
+	public void testIngresoYRetirada() {
+		
+	}
+	public static void main(String args[]) {
+		junit.swingui.TestRunner.run(CuentaTester1.class);
+	}
+}

@@ -1,0 +1,5 @@
+package dominio.test;
+
+public class CuentaTester1 extends TestCase{
+
+}
