@@ -1,5 +1,7 @@
 package dominio;
 
+import java.util.Vector;
+
 /**
  * Una clase el la que se crea una cuenta bancaria
  * Aqui se almacena los datos basicos de una cuenta y sus movimientos
@@ -24,6 +26,9 @@ public class Cuenta {
 		mMovimientos=new Vector();
 	}
 	
+	
+	
+	
 	/**
 	 * Metodo para ingresar dinero en la cuenta
 	 * se utiliza el parametro para añadir el movimiento efectuado en la cuenta	
@@ -39,4 +44,33 @@ public class Cuenta {
 		m.setImporte(x);
 		this.mMovimientos.addElement(m);
 	}
+	
+	/**
+	 * metodo para retirar una determinada cantidad de dinero del banco
+	 * @param x cantidad de dinero a retirar
+	 * @throws Exception
+	 */
+	public void retirar(double x) throws Exception{
+		if(x<=0)
+			throw new Exception("No se puede retirar una cantidad negativa");
+		if(getSaldo()<x)
+			throw new Exception("saldo insuficiente");
+		
+		Movimiento m= new Movimiento();
+		m.setConcepto("retirada en efectivo");
+		m.setImporte(-x);
+		this.mMovimientos.addElement(m);
+	}
+	
+	/**
+	 * 
+	 * @param concepto
+	 * @param x
+	 * @author Aketza
+	 */
+	public void ingresar(String concepto, double x) {
+		
+		
+	}
+	
 }
