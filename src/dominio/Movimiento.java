@@ -33,6 +33,6 @@ public class Movimiento {
 	 */
 	public void setImporte(double newMImporte)
 	{
-		mImporte = newMImporte
+		mImporte = newMImporte;
 	}
 }
