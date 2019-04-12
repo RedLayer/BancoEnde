@@ -1,10 +1,22 @@
 package dominio;
 
+/**
+ * Una clase el la que se crea una cuenta bancaria
+ * Aqui se almacena los datos basicos de una cuenta y sus movimientos
+ * @author Pablo
+ *
+ */
 public class Cuenta {
 	protected String mNumero;
 	protected String mTitular;
 	protected Vector mMovimientos;
 	
+	/**
+	 * Constructor de la clase Cuenta en
+	 * el que se pide el numero y el titular
+	 * @param numero numero de la cuenta
+	 * @param titular titular de la cuenta
+	 */
 	public Cuenta(String numero, String titular)
 	{
 		mNumero=numero;
@@ -12,6 +24,12 @@ public class Cuenta {
 		mMovimientos=new Vector();
 	}
 	
+	/**
+	 * Metodo para ingresar dinero en la cuenta
+	 * se utiliza el parametro para añadir el movimiento efectuado en la cuenta	
+	 * @param x el dinero que se añade al movimiento de la cuenta
+	 * @throws Exception Excepcion lanzada si el parametro es negativo
+	 */
 	public void ingresar(double x) throws Exception
 	{
 		if(x<=0)

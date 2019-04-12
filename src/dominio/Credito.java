@@ -1,8 +1,16 @@
 package dominio;
-
+/**
+ * Clase para hacer todo tipo de movimientos 
+ * relacionados con el credito de la tarjeta
+ * @author Pablo
+ *
+ */
 public class Credito extends Tarjeta
 {
-	
+	/**
+	 * Metodo que devuelve el saldo total
+	 * @return devuelve un numero con el saldo total
+	 */
 	public double getSaldo()
 	{
 		double r=0.0;
@@ -14,11 +22,22 @@ public class Credito extends Tarjeta
 		return r;
 	}
 	
+	/**
+	 * Metodo que devuelve el credito disponible
+	 * restandole el saldo al credito total
+	 * @return devuelve en un numero el credito disponible
+	 */
 	public double getCreditoDisponible()
 	{
 		return mCredito-getSaldo();
 	}
 	
+	/**
+	 * Liquida todas las movimientos de la tarjeta de credito
+	 * clasificando el año y el mes para la misma
+	 * @param mes mes de la liquidacion
+	 * @param año año de la liquidacion
+	 */
 	public void liquidar(int mes, int año)
 	{
 		Movimiento liq = new Movimiento();
