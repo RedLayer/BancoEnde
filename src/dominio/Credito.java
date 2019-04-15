@@ -10,6 +10,7 @@ public class Credito extends Tarjeta
 	/**
 	 * Metodo que devuelve el saldo total
 	 * @return devuelve un numero con el saldo total
+	 * @author Pablo
 	 */
 	public double getSaldo()
 	{
@@ -26,6 +27,7 @@ public class Credito extends Tarjeta
 	 * Metodo que devuelve el credito disponible
 	 * restandole el saldo al credito total
 	 * @return devuelve en un numero el credito disponible
+	 * @author Pablo
 	 */
 	public double getCreditoDisponible()
 	{
@@ -37,6 +39,7 @@ public class Credito extends Tarjeta
 	 * clasificando el año y el mes para la misma
 	 * @param mes mes de la liquidacion
 	 * @param año año de la liquidacion
+	 * @author Pablo
 	 */
 	public void liquidar(int mes, int año)
 	{

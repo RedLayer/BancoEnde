@@ -15,11 +15,13 @@ public abstract class Tarjeta {
 	 * @param datos datos del establecimiento
 	 * @param x dinero a pagar al establecimiento
 	 * @throws Exception excepcion si el numero es negativo
+	 * @author Pablo
 	 */
 	public abstract void pagoEnEstablecimiento(String datos, double x) throws Exception;
 	/**
 	 * Metodo abstracto para recoger el saldo
 	 * @return devuelve un numero con el saldo
+	 * @Author Pablo
 	 */ 
 	public abstract double getSaldo();
 }

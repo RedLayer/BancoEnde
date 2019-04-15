@@ -11,6 +11,7 @@ class CuentaTester1 extends TestCase{
 	
 	/**
 	 * Prueba para ingresar 1000 en la cuenta
+	 * @author Pablo
 	 */
 	public void testIngresar1000()
 	{
@@ -19,6 +20,7 @@ class CuentaTester1 extends TestCase{
 	
 	/**
 	 * Prueba para retirar 1000 de la cuenta
+	 * @author Pablo
 	 */
 	public void testRetirar1000()
 	{

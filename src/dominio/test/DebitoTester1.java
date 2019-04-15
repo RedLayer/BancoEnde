@@ -20,6 +20,7 @@ class DebitoTester1 extends TestCase{
 	/**
 	 * Creacion del constructor de la clase
 	 * @param sTestName Nombre del test para la clase TestCase
+	 * @author Pablo
 	 */
 	public DebitoTester1(String sTestName)
 	{
@@ -28,6 +29,7 @@ class DebitoTester1 extends TestCase{
 	
 	/**
 	 * prueba de set para la clase de debito
+	 * @author Pablo
 	 */
 	public void setUp() throws Exception
 	{

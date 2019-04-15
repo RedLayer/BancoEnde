@@ -8,6 +8,7 @@ public class Debito extends Tarjeta
 	 * @param datos datos del sitio de compra
 	 * @param x dinero a retirar de la cuenta
 	 * @throws Exception Excepcion que lanza si el dinero no es suficiente
+	 * @author Pablo
 	 */
 	public void pagoEnEstablecimiento(String datos, double x) throws Exception
 	{
@@ -18,6 +19,7 @@ public class Debito extends Tarjeta
 	 * Metodo que devuelve el saldo
 	 * disponible en la cuenta asociada
 	 * @return Devuelve un numero con el saldo disponible
+	 * @author Pablo
 	 */
 	public double getSaldo() 
 	{

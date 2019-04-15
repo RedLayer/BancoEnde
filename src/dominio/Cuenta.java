@@ -16,6 +16,7 @@ public class Cuenta {
 	 * el que se pide el numero y el titular
 	 * @param numero numero de la cuenta
 	 * @param titular titular de la cuenta
+	 * @author Pablo
 	 */
 	public Cuenta(String numero, String titular)
 	{
@@ -29,6 +30,7 @@ public class Cuenta {
 	 * se utiliza el parametro para añadir el movimiento efectuado en la cuenta	
 	 * @param x el dinero que se añade al movimiento de la cuenta
 	 * @throws Exception Excepcion lanzada si el parametro es negativo
+	 * @author Pablo
 	 */
 	public void ingresar(double x) throws Exception
 	{

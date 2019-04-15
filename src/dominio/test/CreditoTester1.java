@@ -20,6 +20,7 @@ class CreditoTester1 extends TestCase{
 	 * Constructor de la clase pruebas de credito
 	 * con titulo pasado a la clase TestCase
 	 * @param sTestName Titulo de la clase pruebas
+	 * @author Pablo
 	 */
 	public CreditoTester1(String sTestName)
 	{
