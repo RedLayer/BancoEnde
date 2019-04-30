@@ -1,7 +1,22 @@
 package dominio;
 
+import java.util.Date;
+
 public class Debito extends Tarjeta
 {
+	
+	/**
+	 *constructor de las tarjetas de débito
+	 *@author Aketza
+	 *@param numero numero de tarjeta
+	 *@param titular titular de la tarjeta
+	 *@param fechaCaducidad fecha de caducidad de la tarjeta
+	 */
+	public Debito(String numero,String titular,Date fechaCaducidad) {
+		super(numero,titular,fechaCaducidad);
+	}
+	
+	
 	/**
 	 * Metodo que realiza un pago en un establecimiento
 	 * retirando el dinero de la cuenta asociada

@@ -1,4 +1,8 @@
 package dominio;
+
+import java.util.Date;
+import java.util.Vector;
+
 /**
  * Clase para hacer todo tipo de movimientos 
  * relacionados con el credito de la tarjeta
@@ -7,6 +11,47 @@ package dominio;
  */
 public class Credito extends Tarjeta
 {
+	protected double mCredito;
+	protected Vector mMovimientos;
+	
+	
+	/**
+	 *constructor del Crédito
+	 *@author Aketza
+	 *@param numero
+	 *@param titular titular del crédito
+	 *@param fechaCaducidad fecha de caducidad del crédito a conceder
+	 *@param credito cantidad a conceder
+	 */
+	public Credito(String numero,String titular,Date fechaCaducidad,double credito) {
+		super(numero,titular,fechaCaducidad);
+		mCredito=credito;
+		mMovimientos=new Vector();
+	}
+	
+	
+	/**
+	 * método para retirar el dinero del crédito
+	 * @author Aketza
+	 * @param x cantidad a retirar
+	 * @exception Excepción si tu saldo es insuficiente
+	 * @return void
+	 */
+	public void retirar(double x) {
+		Movimiento m= new Movimiento();
+		m.setConcepto("Retirada en cajero automático");
+		x=(x*0.05<3.0? 3 : x*0.05); 
+		m.setImporte(x);
+		mMovimientos.addElement(m);
+		
+		if (x>getCreditoDisponible())
+			throw new Exception("Crédito insuficiente");
+		
+	}
+	
+	
+	
+	
 	/**
 	 * Metodo que devuelve el saldo total
 	 * @return devuelve un numero con el saldo total

@@ -41,4 +41,37 @@ public class Cuenta {
 		m.setImporte(x);
 		this.mMovimientos.addElement(m);
 	}
+	
+	/**
+	 * método que retira dinero de la cuenta
+	 * @author Aketza
+	 * @param x cantidad de dinero a retirar
+	 * @exception Exception si el saldo es insuficiente o la cantidad introducida negativa
+	 * @return void
+	 */
+	public void retirar(double x) throws Exception{
+		
+		if(x>0)
+			throw new Exception("No se puede retirar una cantidad negativa");		
+		if("getSaldo()<x")
+			throw new Exception("Saldo insuficiente");
+		
+		Movimiento m= new Movimiento();
+		m.setConcepto("Retirada en efectivo");
+		m.setImporte(-x);
+		this.mMovimientos.addElement(m);
+	}
+	
+	
+	public void ingresar(String concepto,double x) throws exception{
+		if(x>0)
+			throw new Exception("No se puede ingresar una cantidad negativa");		
+		Movimiento m= new Movimiento();
+		m.setConcepto("Ingreso en efectivo");
+		m.setImporte(x);
+		this.mMovimientos.addElement(m);
+		
+	}
+	
+	
 }

@@ -18,6 +18,24 @@ public abstract class Tarjeta {
 	 * @author Pablo
 	 */
 	public abstract void pagoEnEstablecimiento(String datos, double x) throws Exception;
+	
+	/**
+	 *Método abstracto sobre la retirada de saldo
+	 *@author Aketza
+	 *@param x dinero a retirar
+	 *@return void
+	 */
+	public abstract void retirar(double x);
+	
+	/**
+	 *Método abstracto sobre el ingreso de dinero
+	 *@author Aketza
+	 *@param x dinero a ingresar
+	 *@return void
+	 */
+	public abstract void ingresar(double x);
+	
+	
 	/**
 	 * Metodo abstracto para recoger el saldo
 	 * @return devuelve un numero con el saldo
