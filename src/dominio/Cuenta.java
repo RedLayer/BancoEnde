@@ -1,5 +1,7 @@
 package dominio;
 
+import java.util.Vector;
+
 /**
  * Una clase el la que se crea una cuenta bancaria
  * Aqui se almacena los datos basicos de una cuenta y sus movimientos
@@ -27,8 +29,8 @@ public class Cuenta {
 
 	/**
 	 * Metodo para ingresar dinero en la cuenta
-	 * se utiliza el parametro para aï¿½adir el movimiento efectuado en la cuenta
-	 * @param x el dinero que se aï¿½ade al movimiento de la cuenta
+	 * se utiliza el parametro para añadir el movimiento efectuado en la cuenta
+	 * @param x el dinero que se añade al movimiento de la cuenta
 	 * @throws Exception Excepcion lanzada si el parametro es negativo
 	 * @author Pablo
 	 */
@@ -37,13 +39,13 @@ public class Cuenta {
 		if(x<=0)
 			throw new Exception("No se puede ingresar una cantidad negativa");
 		Movimiento m = new Movimiento();
-		m.setconcepto("Ingreso en efectivo");
+		m.setConcepto("Ingreso en efectivo");
 		m.setImporte(x);
 		this.mMovimientos.addElement(m);
 	}
 
 	/**
-	 * mï¿½todo que retira dinero de la cuenta
+	 * metodo que retira dinero de la cuenta
 	 * @author Aketza
 	 * @param x cantidad de dinero a retirar
 	 * @exception Exception si el saldo es insuficiente o la cantidad introducida negativa
@@ -53,7 +55,7 @@ public class Cuenta {
 
 		if(x>0)
 			throw new Exception("No se puede retirar una cantidad negativa");
-		if("getSaldo()<x")
+		if(getSaldo()<x)
 			throw new Exception("Saldo insuficiente");
 
 		Movimiento m= new Movimiento();
@@ -63,7 +65,7 @@ public class Cuenta {
 	}
 
 
-	public void ingresar(String concepto,double x) throws exception{
+	public void ingresar(String concepto,double x) throws Exception{
 		if(x>0)
 			throw new Exception("No se puede ingresar una cantidad negativa");
 		Movimiento m= new Movimiento();
@@ -105,9 +107,9 @@ public class Cuenta {
 	}
 
 	/**
-	* Metodo para aÃ±adir un movimiento a la lista de movimientos
+	* Metodo para añadir un movimiento a la lista de movimientos
 	* @author Ruben
-	* @param m movimiento que se desea aÃ±adir a la lista
+	* @param m movimiento que se desea añadir a la lista
 	*/
 	public void addMovimiento(Movimiento m)
 	{

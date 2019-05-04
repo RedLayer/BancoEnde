@@ -6,7 +6,7 @@ public class Debito extends Tarjeta
 {
 
 	/**
-	 *constructor de las tarjetas de d�bito
+	 *constructor de las tarjetas de debito
 	 *@author Aketza
 	 *@param numero numero de tarjeta
 	 *@param titular titular de la tarjeta

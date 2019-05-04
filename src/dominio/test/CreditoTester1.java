@@ -84,7 +84,7 @@ class CreditoTester1 extends TestCase{
 	}
 
 	public static void main (String args[]){
-		junit.swingui.TestRunner.run(CreditoTester1.class);
+		//junit.swingui.TestRunner.run(CreditoTester1.class);
 	}
 
 

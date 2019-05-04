@@ -1,5 +1,7 @@
 package dominio;
 
+import java.util.Date;
+
 /**
  * La tarjeta con sus respectivos campos
  * incluyendo objetos de otras clases
@@ -22,7 +24,7 @@ public abstract class Tarjeta {
 	* @author Ruben
 	* @param numero numero identificativo de la Tarjeta
 	* @param titular nombre del titular de la Tarjeta
-	* @param fechaCaducidad fecha en la que la tarjeta dejará de ser válida
+	* @param fechaCaducidad fecha en la que la tarjeta dejara de ser valida
 	*/
 	public Tarjeta(String numero, String titular, Date fechaCaducidad){
 		mNumero=numero;
@@ -33,7 +35,7 @@ public abstract class Tarjeta {
 	/**
 	* Metodo que asocia una cuenta bancaria a una Tarjeta
 	* @author Ruben
-	* @param c cuenta bancaria que se asociará a la Tarjeta
+	* @param c cuenta bancaria que se asociara a la Tarjeta
 	*/
 	public void setCuenta(Cuenta c){
 		mCuentaAsociada=c;
@@ -49,20 +51,22 @@ public abstract class Tarjeta {
 	public abstract void pagoEnEstablecimiento(String datos, double x) throws Exception;
 
 	/**
-	 *M�todo abstracto sobre la retirada de saldo
+	 *Metodo abstracto sobre la retirada de saldo
 	 *@author Aketza
 	 *@param x dinero a retirar
 	 *@return void
+	 * @throws Exception 
 	 */
-	public abstract void retirar(double x);
+	public abstract void retirar(double x) throws Exception;
 
 	/**
-	 *M�todo abstracto sobre el ingreso de dinero
+	 *Metodo abstracto sobre el ingreso de dinero
 	 *@author Aketza
 	 *@param x dinero a ingresar
 	 *@return void
+	 * @throws Exception 
 	 */
-	public abstract void ingresar(double x);
+	public abstract void ingresar(double x) throws Exception;
 
 
 	/**

@@ -33,7 +33,7 @@ class DebitoTester1 extends TestCase{
 	 */
 	public void setUp() throws Exception
 	{
-		cuenta= new Cuenta("0001.0002.12.1234567890","Fulano de tal")
+		cuenta= new Cuenta("0001.0002.12.1234567890","Fulano de tal");
 		cuenta.ingresar(1000.0);
 		Date hoy = new Date();
 		long tiempo = Long.parseLong("12096000000");

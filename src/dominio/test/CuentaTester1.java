@@ -72,7 +72,7 @@ class CuentaTester1 extends TestCase{
 
 
 	public static void main(String[] args) {
-		Junit.swingui.TestRunner.run(CuentaTester1.class);
+		//Junit.swingui.TestRunner.run(CuentaTester1.class);
 	}
 
 }

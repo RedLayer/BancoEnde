@@ -31,7 +31,7 @@ public class Movimiento {
 	}
 	
 	/**
-	 * m�todo que devuelve el concepto de un movimiento
+	 * metodo que devuelve el concepto de un movimiento
 	 * @author Aketza
 	 * @return String
 	 */
@@ -41,7 +41,7 @@ public class Movimiento {
 	}
 
 	/**
-	 * m�todo que sobreescribe el concepto de un movimiento con el que le pasan
+	 * metodo que sobreescribe el concepto de un movimiento con el que le pasan
 	 * @author Aketza
 	 * @param newMConcepto el nuevo concepto a escribir
 	 * @return void

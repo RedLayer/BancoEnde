@@ -16,11 +16,11 @@ public class Credito extends Tarjeta
 
 
 	/**
-	 *constructor del Crï¿½dito
+	 *constructor del Credito
 	 *@author Aketza
 	 *@param numero
-	 *@param titular titular del crï¿½dito
-	 *@param fechaCaducidad fecha de caducidad del crï¿½dito a conceder
+	 *@param titular titular del credito
+	 *@param fechaCaducidad fecha de caducidad del credito a conceder
 	 *@param credito cantidad a conceder
 	 */
 	public Credito(String numero,String titular,Date fechaCaducidad,double credito) {
@@ -31,21 +31,21 @@ public class Credito extends Tarjeta
 
 
 	/**
-	 * mï¿½todo para retirar el dinero del crï¿½dito
+	 * metodo para retirar el dinero del credito
 	 * @author Aketza
 	 * @param x cantidad a retirar
-	 * @exception Excepciï¿½n si tu saldo es insuficiente
+	 * @exception Excepcion si tu saldo es insuficiente
 	 * @return void
 	 */
-	public void retirar(double x) {
+	public void retirar(double x) throws Exception{
 		Movimiento m= new Movimiento();
-		m.setConcepto("Retirada en cajero automï¿½tico");
+		m.setConcepto("Retirada en cajero automatico");
 		x=(x*0.05<3.0? 3 : x*0.05);
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 
 		if (x>getCreditoDisponible())
-			throw new Exception("Crï¿½dito insuficiente");
+			throw new Exception("Credito insuficiente");
 
 	}
 
@@ -54,9 +54,9 @@ public class Credito extends Tarjeta
 	* @author Ruben
 	* @param x cantidad a ingresar
 	*/
-	public void ingresar (double x) throws exception{
+	public void ingresar (double x) throws Exception{
 		Movimiento m = new Movimiento();
-		m.setConcepto("Ingreso en cuenta asociada(cajero automÃ¡tico)");
+		m.setConcepto("Ingreso en cuenta asociada(cajero automatico)");
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 		mCuentaAsociada.ingresar(x);
@@ -68,9 +68,9 @@ public class Credito extends Tarjeta
 	* @param datos datos del establecimiento en el que se ha realizado el pago
 	* @param x cantidad ingresada
 	*/
-	public void pagoEnEstablecimiento(String datos, double x) throws exception{
+	public void pagoEnEstablecimiento(String datos, double x) throws Exception{
 		Movimiento m=new Movimiento();
-		m.setConcepto("Compra a crÃ©dito en " + datos);
+		m.setConcepto("Compra a credito en " + datos);
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 	}
@@ -105,20 +105,20 @@ public class Credito extends Tarjeta
 
 	/**
 	 * Liquida todas las movimientos de la tarjeta de credito
-	 * clasificando el aï¿½o y el mes para la misma
+	 * clasificando el año y el mes para la misma
 	 * @param mes mes de la liquidacion
-	 * @param aï¿½o aï¿½o de la liquidacion
+	 * @param anio año de la liquidacion
 	 * @author Pablo
 	 */
-	public void liquidar(int mes, int aï¿½o)
+	public void liquidar(int mes, int anio)
 	{
 		Movimiento liq = new Movimiento();
-		liq.setConcepto("Liquidaciï¿½n de operaciones de tarj, crï¿½dito, " + (mes+1) + " de " + (aï¿½o+1900));
+		liq.setConcepto("Liquidaciï¿½n de operaciones de tarj, crï¿½dito, " + (mes+1) + " de " + (anio+1900));
 		double r=0.0;
-		for(int=0;i<this.mMovimientos.size();i++)
+		for(int i=0;i<this.mMovimientos.size();i++)
 		{
 			Movimiento m= (Movimiento) mMovimientos.elementAt(i);
-			if (m.getFecha().getMonth()+1==mes && m.getFecha().getYear()+1900==aï¿½o)
+			if (m.getFecha().getMonth()+1==mes && m.getFecha().getYear()+1900==anio)
 				r+=m.getImporte();
 		}
 		liq.setImporte(r);
