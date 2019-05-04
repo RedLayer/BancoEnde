@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Debito extends Tarjeta
 {
-	
+
 	/**
-	 *constructor de las tarjetas de d�bito
+	 *constructor de las tarjetas de d�bito
 	 *@author Aketza
 	 *@param numero numero de tarjeta
 	 *@param titular titular de la tarjeta
@@ -15,8 +15,26 @@ public class Debito extends Tarjeta
 	public Debito(String numero,String titular,Date fechaCaducidad) {
 		super(numero,titular,fechaCaducidad);
 	}
-	
-	
+
+	/**
+	* Metodo para retirar dinero de la cuenta de Debito
+	* @author Ruben
+	* @param x cantidad a retirar
+	*/
+	public void retirar(double x) throws Exception{
+		this.mCuentaAsociada.retirar("Retirada en cajero automático",x);
+	}
+
+	/**
+	* Metodo para ingresar dinero a la cuenta de Debito
+	* @author Ruben
+	* @param x cantidad a ingresar
+	*/
+	public void ingresar(double x) throws Exception{
+		this.mCuentaAsociada.ingresar("Ingreso en cajero automático",x);
+	}
+
+
 	/**
 	 * Metodo que realiza un pago en un establecimiento
 	 * retirando el dinero de la cuenta asociada
@@ -29,14 +47,14 @@ public class Debito extends Tarjeta
 	{
 		this.mCuentaAsociada.retirar("Compra en: " + datos,x);
 	}
-	
+
 	/**
 	 * Metodo que devuelve el saldo
 	 * disponible en la cuenta asociada
 	 * @return Devuelve un numero con el saldo disponible
 	 * @author Pablo
 	 */
-	public double getSaldo() 
+	public double getSaldo()
 	{
 		return mCuentaAsociada.getSaldo();
 	}
