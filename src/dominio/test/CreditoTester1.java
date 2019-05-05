@@ -30,9 +30,6 @@ class CreditoTester1 extends TestCase{
 		super(sTestName);
 	}
 
-
-
-
 	/**
 	 * prueba para ver si funcionan los constructores de tarjeta y cuenta
 	 * @author Aketza
