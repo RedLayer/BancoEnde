@@ -113,7 +113,7 @@ public class Credito extends Tarjeta
 	public void liquidar(int mes, int anio)
 	{
 		Movimiento liq = new Movimiento();
-		liq.setConcepto("Liquidaci�n de operaciones de tarj, cr�dito, " + (mes+1) + " de " + (anio+1900));
+		liq.setConcepto("Liquidacion de operaciones de tarj, credito, " + (mes+1) + " de " + (anio+1900));
 		double r=0.0;
 		for(int i=0;i<this.mMovimientos.size();i++)
 		{
